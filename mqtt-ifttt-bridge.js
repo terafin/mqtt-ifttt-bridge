@@ -9,7 +9,7 @@ const mqtt_helpers = require('./homeautomation-js-lib/mqtt_helpers.js')
 const host = process.env.MQTT_HOST
 
 // Set up modules
-var logging.set_enabled(true)
+logging.set_enabled(true)
 
 // Setup MQTT
 var client = mqtt.connect(host)
@@ -18,7 +18,7 @@ var client = mqtt.connect(host)
 
 client.on('connect', () => {
     logging.log('Reconnecting...\n')
-    client.subscribe("#")
+    client.subscribe('#')
 })
 
 client.on('disconnect', () => {
@@ -27,7 +27,7 @@ client.on('disconnect', () => {
 })
 
 client.on('message', (topic, message) => {
-    logging.log(" " + topic + ":" + message)
+    logging.log(' ' + topic + ':' + message)
 })
 
 // Web front end
@@ -38,9 +38,9 @@ app.get('/ifttt/*', function(req, res) {
     topic = url_info.pathname.slice(6)
     value = url_info.query.value
 
-    logging.log("Publishing: " + topic + ":" + value)
+    logging.log('Publishing: ' + topic + ':' + value)
     mqtt_helpers.publish(client, topic, value)
-    res.send('topic: ' + topic + " value: " + value)
+    res.send('topic: ' + topic + ' value: ' + value)
 })
 
 app.listen(3000, function() {
