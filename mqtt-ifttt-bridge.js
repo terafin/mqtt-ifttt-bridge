@@ -31,12 +31,12 @@ client.on('message', (topic, message) => {
 })
 
 // Web front end
-app = express()
+var app = express()
 
 app.get('/ifttt/*', function(req, res) {
-    url_info = url.parse(req.url, true)
-    topic = url_info.pathname.slice(6)
-    value = url_info.query.value
+    var url_info = url.parse(req.url, true)
+    var topic = url_info.pathname.slice(6)
+    var value = url_info.query.value
 
     logging.log('Publishing: ' + topic + ':' + value)
     mqtt_helpers.publish(client, topic, value)
@@ -44,5 +44,5 @@ app.get('/ifttt/*', function(req, res) {
 })
 
 app.listen(3000, function() {
-    console.log('IFTTT listener started on port 3000')
+    logging.log('IFTTT listener started on port 3000')
 })
