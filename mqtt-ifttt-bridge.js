@@ -2,8 +2,8 @@
 const mqtt = require('mqtt')
 const url = require('url')
 const express = require('express')
-const logging = require('./homeautomation-js-lib/logging.js')
-require('./homeautomation-js-lib/mqtt_helpers.js')
+const logging = require('homeautomation-js-lib/logging.js')
+require('homeautomation-js-lib/mqtt_helpers.js')
 
 
 // Setup MQTT
