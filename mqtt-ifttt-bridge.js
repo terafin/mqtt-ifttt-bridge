@@ -14,9 +14,7 @@ var client = mqtt.setupClient(null, null)
 
 // Web front end
 var app = express()
-app.use(bodyParser);
-
-app.use(bodyParser);
+app.use(bodyParser.json());
 
 app.post('/ifttt/post', function(req, res) {
     const body = req.body
