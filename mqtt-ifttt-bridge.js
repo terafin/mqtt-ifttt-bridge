@@ -4,7 +4,7 @@ const url = require('url')
 const express = require('express')
 const bodyParser = require('body-parser');
 const logging = require('homeautomation-js-lib/logging.js')
-const _ = request('lodash')
+const _ = require('lodash')
 
 require('homeautomation-js-lib/mqtt_helpers.js')
 
