@@ -31,7 +31,7 @@ app.post('/ifttt/post', function(req, res) {
     var topic = body.topic
     var value = body.value
 
-    logging.log('Publishing: ' + topic + ':' + value)
+    logging.info('Publishing: ' + topic + ':' + value)
     client.publish(topic.toString(), value.toString())
     res.send('topic: ' + topic + ' value: ' + value)
 })
@@ -47,11 +47,11 @@ app.get('/ifttt/*', function(req, res) {
     var topic = url_info.pathname.slice(6)
     var value = url_info.query.value
 
-    logging.log('Publishing: ' + topic + ':' + value)
+    logging.info('Publishing: ' + topic + ':' + value)
     client.publish(topic, value)
     res.send('topic: ' + topic + ' value: ' + value)
 })
 
 app.listen(3000, function() {
-    logging.log('IFTTT listener started on port 3000')
+    logging.info('IFTTT listener started on port 3000')
 })
