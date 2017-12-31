@@ -15,7 +15,7 @@
         "express": "^4.15.2",
         "homeautomation-js-lib": "git://github.com/terafin/homeautomation-js-lib.git",
         "lodash": "^4.17.4",
-        "mqtt": "^2.6.2",
+        "mqtt": "^2.15.0",
         "request": "^2.81.0",
         "url": "^0.11.0"
     },
