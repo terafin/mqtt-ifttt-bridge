@@ -11,13 +11,13 @@
         "start": "node mqtt-ifttt-bridge.js"
     },
     "dependencies": {
-        "body-parser": "^1.18.2",
-        "express": "^4.15.2",
+        "body-parser": "latest",
+        "express": "latest",
         "homeautomation-js-lib": "git://github.com/terafin/homeautomation-js-lib.git",
-        "lodash": "^4.17.4",
-        "mqtt": "^2.15.0",
-        "request": "^2.81.0",
-        "url": "^0.11.0"
+        "lodash": "latest",
+        "mqtt": "latest",
+        "request": "latest",
+        "url": "latest"
     },
     "engines": {
         "node": ">=4"
