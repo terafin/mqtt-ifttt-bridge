@@ -48,7 +48,7 @@ app.get('/ifttt/*', function(req, res) {
 	var value = url_info.query.value
 
 	logging.info('Publishing: ' + topic + ':' + value)
-	client.publish(topic, value, {qos: 2})
+	client.publish(topic, value, {qos: 1})
 	res.send('topic: ' + topic + ' value: ' + value)
 })
 
