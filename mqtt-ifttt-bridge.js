@@ -32,7 +32,7 @@ app.post('/ifttt/post', function(req, res) {
 	var value = body.value
 
 	logging.info('Publishing: ' + topic + ':' + value)
-	client.publish(topic.toString(), value.toString(), {qos: 2})
+	client.publish(topic.toString(), value.toString(), {qos: 1})
 	res.send('topic: ' + topic + ' value: ' + value)
 })
 
