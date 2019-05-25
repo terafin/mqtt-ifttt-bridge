@@ -5,12 +5,11 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const logging = require('homeautomation-js-lib/logging.js')
 const _ = require('lodash')
-
-require('homeautomation-js-lib/mqtt_helpers.js')
+const mqtt_helpers = require('homeautomation-js-lib/mqtt_helpers.js')
 
 
 // Setup MQTT
-var client = mqtt.setupClient(null, null)
+var client = mqtt_helpers.setupClient(null, null)
 
 // Web front end
 var app = express()
