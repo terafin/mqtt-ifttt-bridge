@@ -1,25 +1,29 @@
 {
-    "name": "mqtt-ifttt-bridge",
-    "version": "0.0.1",
-    "description": "Bridge ifttt via HTTP to and from MQTT",
-    "license": "MIT",
-    "main": "mqtt-ifttt-bridge.js",
-    "repository": {
-        "url": "https://github.com/terafin/mqtt-ifttt-bridge"
-    },
-    "scripts": {
-        "start": "node mqtt-ifttt-bridge.js"
-    },
-    "dependencies": {
-        "body-parser": "latest",
-        "express": "latest",
-        "homeautomation-js-lib": "https://github.com/terafin/homeautomation-js-lib.git",
-        "lodash": "^4.17.15",
-        "mqtt": "latest",
-        "request": "latest",
-        "url": "latest"
-    },
-    "engines": {
-        "node": ">=4"
-    }
+  "name": "mqtt-ifttt-bridge",
+  "version": "0.0.1",
+  "description": "Bridge ifttt via HTTP to and from MQTT",
+  "license": "MIT",
+  "main": "mqtt-ifttt-bridge.js",
+  "repository": {
+    "url": "https://github.com/terafin/mqtt-ifttt-bridge"
+  },
+  "scripts": {
+    "start": "node mqtt-ifttt-bridge.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "dependencies": {
+    "body-parser": "latest",
+    "express": "latest",
+    "homeautomation-js-lib": "https://github.com/terafin/homeautomation-js-lib.git",
+    "lodash": "^4.17.15",
+    "mqtt": "latest",
+    "request": "latest",
+    "url": "latest",
+    "snyk": "^1.316.1"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "snyk": true
 }
